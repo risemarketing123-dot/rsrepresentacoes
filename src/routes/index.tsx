@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
-import { Sobre, Segmentos, Diferenciais, ComoFunciona, CtaFinal } from "@/components/site/Sections";
+import { Sobre, Diferenciais, ComoFunciona, CtaFinal } from "@/components/site/Sections";
+import { LinhasEmDestaque } from "@/components/site/Portfolio";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
 const TITLE = "EPI e Higiene em Jaboticabal | RS Representações";
@@ -38,6 +39,7 @@ export const Route = createFileRoute("/")({
               description: DESCRIPTION,
               areaServed: "Jaboticabal e região, São Paulo, Brasil",
               telephone: `+${WHATSAPP_NUMBER}`,
+              email: "robsonjustino.rs@gmail.com",
             },
             {
               "@type": "LocalBusiness",
@@ -46,6 +48,7 @@ export const Route = createFileRoute("/")({
               legalName: "RS Justino — Comércio e Representação em Higiene",
               description: DESCRIPTION,
               telephone: `+${WHATSAPP_NUMBER}`,
+              email: "robsonjustino.rs@gmail.com",
               priceRange: "$$",
               address: {
                 "@type": "PostalAddress",
@@ -77,8 +80,8 @@ function Index() {
   return (
     <>
       <Hero />
+      <LinhasEmDestaque />
       <Sobre />
-      <Segmentos />
       <Diferenciais />
       <ComoFunciona />
       <CtaFinal />

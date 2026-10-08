@@ -405,21 +405,32 @@ export function Contato() {
               detalhe: "Atendimento presencial e entrega própria.",
             },
             {
-              icone: "Clock",
-              titulo: "Horário comercial",
-              texto: "Segunda a sexta",
-              detalhe: "Retorno no mesmo dia útil sempre que possível.",
+              icone: "Mail",
+              titulo: "E-mail",
+              texto: "robsonjustino.rs@gmail.com",
+              detalhe: "Envie sua lista de produtos e informações do pedido.",
             },
           ].map((c) => (
             <Reveal as="article" key={c.titulo} className="h-full">
               <div className="flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60">
                 <Icon name={c.icone} className="size-6 text-accent" />
                 <h3 className="mt-4 text-lg text-primary">{c.titulo}</h3>
-                <p className="mt-2 font-medium text-foreground">{c.texto}</p>
+                {c.titulo === "E-mail" ? (
+                  <a href="mailto:robsonjustino.rs@gmail.com" className="mt-2 break-all font-medium text-foreground underline-offset-4 hover:underline">{c.texto}</a>
+                ) : c.titulo === "WhatsApp" ? (
+                  <a href="https://wa.me/5516992342353" target="_blank" rel="noopener noreferrer" className="mt-2 font-medium text-foreground underline-offset-4 hover:underline">{c.texto}</a>
+                ) : (
+                  <p className="mt-2 font-medium text-foreground">{c.texto}</p>
+                )}
                 <p className="mt-1 text-sm text-muted-foreground">{c.detalhe}</p>
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-7 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+          <a href="https://www.instagram.com/robson.justino.rs/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-border px-5 py-3 text-primary hover:border-accent">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61595100514461" target="_blank" rel="noopener noreferrer" className="rounded-full border border-border px-5 py-3 text-primary hover:border-accent">Facebook</a>
         </div>
 
         <Reveal className="mt-10 flex flex-col items-center gap-4 rounded-2xl border border-accent/40 bg-secondary px-6 py-10 text-center">

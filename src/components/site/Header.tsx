@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 const links = [
   { to: "/", label: "Início" },
   { to: "/produtos", label: "Produtos" },
+  { to: "/catalogo", label: "Catálogo" },
+  { to: "/sobre", label: "Sobre a RS" },
   { to: "/contato", label: "Contato" },
 ] as const;
 
@@ -54,7 +56,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Navegação principal">
           {links.map((l) => (
             <Link
               key={l.to}

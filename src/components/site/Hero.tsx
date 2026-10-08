@@ -1,11 +1,12 @@
 import hero from "@/assets/hero-composicao.webp";
-import { QuoteButton, GoldRule, Counter, Reveal } from "./ui";
+import { Link } from "@tanstack/react-router";
+import { QuoteButton, GoldRule, Reveal } from "./ui";
 
-const stats: { value?: number; suffix?: string; text?: string; label: string }[] = [
-  { value: 16, label: "categorias de produtos" },
-  { value: 8, label: "marcas representadas" },
+const stats = [
+  { text: "4 linhas", label: "em destaque" },
+  { text: "Direto", label: "atendimento consultivo" },
   { text: "PF e PJ", label: "empresas e pessoas físicas" },
-  { text: "Própria", label: "entrega na região" },
+  { text: "Local", label: "entrega na região" },
 ];
 
 
@@ -35,13 +36,9 @@ export function Hero() {
             <QuoteButton variant="gold" className="w-full sm:w-auto">
               Solicitar orçamento
             </QuoteButton>
-            <QuoteButton
-              variant="ghost"
-              className="w-full sm:w-auto"
-              context="Gostaria de falar com um especialista"
-            >
-              Falar com um especialista
-            </QuoteButton>
+            <Link to="/produtos" className="inline-flex min-h-12 w-full items-center justify-center rounded-md border border-primary-foreground/30 px-6 text-sm font-semibold tracking-wide text-primary-foreground transition-colors hover:bg-primary-foreground/10 sm:w-auto">
+              Ver produtos
+            </Link>
           </Reveal>
         </div>
 
@@ -66,12 +63,7 @@ export function Hero() {
               <dt className="sr-only">{s.label}</dt>
               <dd>
                 <span className="block font-serif text-3xl font-semibold text-gold-soft sm:text-4xl">
-                  {typeof s.value === "number" ? (
-                    <Counter value={s.value} suffix={s.suffix ?? ""} />
-                  ) : (
-                    s.text
-                  )}
-
+                  {s.text}
                 </span>
                 <span className="mt-1 block text-xs uppercase tracking-[0.16em] text-primary-foreground/65">
                   {s.label}

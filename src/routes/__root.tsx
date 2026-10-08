@@ -36,7 +36,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -94,8 +94,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "RS Representações | EPI, Segurança e Higiene em Jaboticabal" },
       { property: "og:description", content: "RS Justino — Comércio e Representação em Higiene. EPI, segurança do trabalho, higiene e limpeza profissional para empresas de Jaboticabal e região." },
       { name: "twitter:description", content: "RS Justino — Comércio e Representação em Higiene. EPI, segurança do trabalho, higiene e limpeza profissional para empresas de Jaboticabal e região." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/873074c9-0e22-4c0c-aeea-eae51a845954/id-preview-05ea66f8--892a313c-c211-40cb-8116-90d582a27658.lovable.app-1786023710581.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/873074c9-0e22-4c0c-aeea-eae51a845954/id-preview-05ea66f8--892a313c-c211-40cb-8116-90d582a27658.lovable.app-1786023710581.png" },
+      { property: "og:image", content: "https://rsrepresentacoes.vercel.app/og-rs.webp" },
+      { name: "twitter:image", content: "https://rsrepresentacoes.vercel.app/og-rs.webp" },
     ],
     links: [
       {

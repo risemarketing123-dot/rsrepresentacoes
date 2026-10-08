@@ -249,14 +249,10 @@ export const marcas = [
 
 export const diferenciais = [
   { titulo: "Atendimento consultivo", texto: "Orientação técnica para escolher o EPI correto para cada risco." },
-  { titulo: "Entrega rápida", texto: "Entrega própria em Jaboticabal e região, com agilidade no atendimento." },
+  { titulo: "Entrega na região", texto: "Entrega própria em Jaboticabal e região, conforme o pedido." },
   { titulo: "Produtos certificados", texto: "Equipamentos com Certificado de Aprovação (CA) exigido pelas normas." },
   { titulo: "Grande variedade", texto: "Centenas de itens em segurança, higiene e limpeza profissional." },
-  { titulo: "Atendimento personalizado", texto: "Cada cliente é atendido de acordo com sua rotina e seu segmento." },
-  { titulo: "Soluções para empresas", texto: "Fornecimento recorrente e organizado para equipes de qualquer porte." },
-  { titulo: "Atendimento para indústrias", texto: "Experiência com demandas industriais e metalúrgicas exigentes." },
   { titulo: "Fornecimento sob encomenda", texto: "Itens específicos providenciados junto às marcas representadas." },
-  { titulo: "Orçamentos rápidos", texto: "Resposta ágil pelo WhatsApp, sem burocracia e sem compromisso." },
   { titulo: "Pessoa física e jurídica", texto: "Atendimento tanto para empresas quanto para profissionais autônomos." },
 ];
 

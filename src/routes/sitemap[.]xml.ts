@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+const BASE_URL = "https://rsrepresentacoes.vercel.app";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
@@ -14,6 +13,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           ...[
             { path: "/", priority: "1.0" },
             { path: "/produtos", priority: "0.9" },
+            { path: "/catalogo", priority: "0.8" },
+            { path: "/sobre", priority: "0.7" },
             { path: "/contato", priority: "0.8" },
           ].flatMap((u) => [
             `  <url>`,

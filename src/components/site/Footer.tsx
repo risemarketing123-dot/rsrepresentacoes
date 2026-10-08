@@ -1,5 +1,5 @@
 import logo from "@/assets/logo-rs-justino.webp";
-import { categorias, marcas } from "@/data/catalogo";
+import { marcas } from "@/data/catalogo";
 import { Link } from "@tanstack/react-router";
 import { whatsappLink, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import { MessageCircle } from "lucide-react";
@@ -33,12 +33,18 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Categorias no rodapé">
-            <h2 className="font-serif text-lg text-primary-foreground">Categorias</h2>
+          <nav aria-label="Páginas no rodapé">
+            <h2 className="font-serif text-lg text-primary-foreground">Explore o site</h2>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/70">
-              {categorias.slice(0, 10).map((c) => (
-                <li key={c.nome}>
-                  <Link to="/produtos" className="transition-colors hover:text-gold-soft">
+              {([
+                { to: "/", nome: "Início" },
+                { to: "/produtos", nome: "Produtos" },
+                { to: "/catalogo", nome: "Catálogo" },
+                { to: "/sobre", nome: "Sobre a RS" },
+                { to: "/contato", nome: "Contato" },
+              ] as const).map((c) => (
+                <li key={c.to}>
+                  <Link to={c.to} className="transition-colors hover:text-gold-soft">
                     {c.nome}
                   </Link>
                 </li>
@@ -61,9 +67,9 @@ export function Footer() {
                 </a>
               </li>
               <li>Atendimento: Jaboticabal e região</li>
-              <li>Endereço: em breve</li>
-              <li>E-mail: em breve</li>
-              <li>Horário de atendimento: em breve</li>
+              <li><a href="mailto:robsonjustino.rs@gmail.com" className="break-all hover:text-gold-soft">robsonjustino.rs@gmail.com</a></li>
+              <li><a href="https://www.instagram.com/robson.justino.rs/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-soft">Instagram @robson.justino.rs</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61595100514461" target="_blank" rel="noopener noreferrer" className="hover:text-gold-soft">Facebook</a></li>
             </ul>
 
             <h2 className="mt-8 font-serif text-lg text-primary-foreground">Marcas</h2>

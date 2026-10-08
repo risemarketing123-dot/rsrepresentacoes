@@ -42,7 +42,7 @@ export const Route = createFileRoute("/contato")({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: TITLE,
-          about: { "@type": "Organization", name: "RS Representações", telephone: `+${WHATSAPP_NUMBER}` },
+          about: { "@type": "Organization", name: "RS Representações", telephone: `+${WHATSAPP_NUMBER}`, email: "robsonjustino.rs@gmail.com" },
         }),
       },
     ],

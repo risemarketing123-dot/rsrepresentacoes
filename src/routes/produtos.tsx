@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Categorias, Produtos, Marcas, NaoEncontrou } from "@/components/site/Sections";
+import { NaoEncontrou } from "@/components/site/Sections";
+import { VitrineDeProdutos, Departamentos } from "@/components/site/Portfolio";
 import { PageHero } from "@/components/site/ui";
 
-const TITLE = "Categorias de Produtos: EPI, Higiene e Limpeza | RS Representações";
+const TITLE = "Produtos: Luvas, Calçados, Óculos e EPIs | RS Representações";
 const DESCRIPTION =
-  "Catálogo da RS Representações: EPI certificado, proteção respiratória, luvas, calçados, uniformes, lixeiras, lavadoras e produtos de higiene e limpeza profissional.";
+  "Conheça produtos comercializados pela RS Representações em Jaboticabal e região: luvas, calçados, óculos, EPIs, higiene e resíduos. Consulte pelo WhatsApp.";
 
 export const Route = createFileRoute("/produtos")({
   head: () => ({
@@ -29,13 +30,12 @@ function ProdutosPage() {
   return (
     <>
       <PageHero
-        overline="Categorias de produtos"
-        title="Tudo em EPI, higiene e limpeza profissional"
-        description="Catálogo organizado por linha de produtos, com itens certificados das marcas que representamos. Solicite o orçamento da categoria que você precisa."
+        overline="Produtos da RS"
+        title="Encontre a linha certa para sua operação"
+        description="Explore uma seleção de produtos e consulte nossa equipe sobre modelos, aplicações e disponibilidade. Atendimento em Jaboticabal e região."
       />
-      <Categorias />
-      <Produtos />
-      <Marcas />
+      <VitrineDeProdutos />
+      <Departamentos />
       <NaoEncontrou />
     </>
   );
