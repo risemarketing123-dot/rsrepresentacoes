@@ -7,13 +7,13 @@ Este pacote contém o código-fonte completo do site e as 19 imagens WebP usadas
 Requer Node.js 20 ou superior. Na raiz do projeto:
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
 ## Publicação na Vercel
 
-Crie ou importe um repositório GitHub com os arquivos desta pasta na raiz. Na Vercel, importe esse repositório como um novo projeto. O `vercel.json` identifica o framework como TanStack Start, e o build usa Nitro com destino Vercel. Não há variáveis de ambiente obrigatórias para as três páginas.
+Crie ou importe um repositório GitHub com os arquivos desta pasta na raiz. Na Vercel, importe esse repositório como um novo projeto. O `vercel.json` identifica o framework como TanStack Start, e o build usa Nitro com destino Vercel. O `package-lock.json` fixa as dependências para a instalação reproduzível. Não há variáveis de ambiente obrigatórias para as três páginas.
 
 O domínio publicado pelo Lovable continuará separado até que o domínio definitivo seja configurado no novo projeto. As marcas na página de produtos usam nomes em texto quando não existe a chave opcional de logo.dev.
 
